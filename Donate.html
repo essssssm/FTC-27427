@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -11,146 +12,197 @@
 <style>
 
 :root{
---primary:#0f172a;
---secondary:#1e40af;
---accent:#3b82f6;
---light:#f8fafc;
+    --primary:#0f172a;
+    --secondary:#1e40af;
+    --accent:#3b82f6;
+    --light:#f8fafc;
 }
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
 }
 
 body{
-background:var(--light);
+    background:var(--light);
 }
 
 nav{
-background:#0f172a;
-padding:20px;
+    background:#0f172a;
+    padding:20px;
 }
 
 nav a{
-color:white;
-text-decoration:none;
-font-weight:600;
+    color:white;
+    text-decoration:none;
+    font-weight:600;
 }
 
 .hero{
-background:
-linear-gradient(rgba(15,23,42,.9),rgba(15,23,42,.9)),
-radial-gradient(circle at top right,#2563eb,#0f172a);
+    background:
+    linear-gradient(rgba(15,23,42,.9),rgba(15,23,42,.9)),
+    radial-gradient(circle at top right,#2563eb,#0f172a);
 
-color:white;
-text-align:center;
-padding:120px 20px;
+    color:white;
+    text-align:center;
+    padding:120px 20px;
 }
 
 .hero h1{
-font-size:4rem;
-margin-bottom:20px;
+    font-size:4rem;
+    margin-bottom:20px;
 }
 
 .hero p{
-max-width:800px;
-margin:auto;
-line-height:1.8;
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
 }
 
 .container{
-max-width:1200px;
-margin:auto;
-padding:80px 20px;
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
 }
 
 .section-title{
-text-align:center;
-font-size:2.5rem;
-margin-bottom:50px;
-color:#0f172a;
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:50px;
+    color:#0f172a;
 }
 
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
 }
 
 .card{
-background:white;
-padding:35px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-transition:.3s;
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
+    transform:translateY(-8px);
 }
 
 .card h3{
-color:#1e40af;
-margin-bottom:15px;
+    color:#1e40af;
+    margin-bottom:15px;
 }
 
 .card p{
-line-height:1.8;
+    line-height:1.8;
 }
 
 .button{
-display:inline-block;
-margin-top:20px;
-padding:15px 35px;
-background:#3b82f6;
-color:white;
-text-decoration:none;
-border-radius:999px;
-font-weight:600;
-transition:.3s;
-}
-
-.button:hover{
-background:#2563eb;
+    display:inline-block;
+    padding:15px 35px;
+    color:white;
+    text-decoration:none;
+    border-radius:999px;
+    font-weight:600;
+    transition:.3s;
 }
 
 .main-donate{
-text-align:center;
-background:white;
-padding:60px;
-border-radius:25px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+    text-align:center;
+    background:white;
+    padding:60px;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
 .main-donate h2{
-margin-bottom:20px;
+    margin-bottom:20px;
+}
+
+.donation-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-top:30px;
+}
+
+.gofundme{
+    background:#02a95c;
+}
+
+.gofundme:hover{
+    background:#018f4e;
+}
+
+.paypal{
+    background:#0070ba;
+}
+
+.paypal:hover{
+    background:#005ea6;
+}
+
+.cashapp{
+    background:#00d632;
+}
+
+.cashapp:hover{
+    background:#00b82b;
+}
+
+.venmo{
+    background:#3d95ce;
+}
+
+.venmo:hover{
+    background:#2f7caf;
 }
 
 footer{
-background:#020617;
-color:white;
-text-align:center;
-padding:30px;
+    background:#020617;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.8rem;
+}
+
+.donation-buttons{
+    flex-direction:column;
+    align-items:center;
+}
+
 }
 
 </style>
+
 </head>
 <body>
 
 <nav>
-<a href="index.html">← Back to Home</a>
+    <a href="index.html">← Back to Home</a>
 </nav>
 
 <section class="hero">
 
+```
 <h1>Support Vienna Voltage</h1>
 
 <p>
-Your generosity helps us build robots, compete in FIRST Tech Challenge
-events, and expand STEM outreach programs throughout our community.
+    Your generosity helps us build robots, compete in FIRST Tech Challenge
+    events, expand STEM outreach programs, and inspire the next generation
+    of engineers, programmers, and innovators.
 </p>
+```
 
 </section>
 
@@ -158,16 +210,36 @@ events, and expand STEM outreach programs throughout our community.
 
 <div class="main-donate">
 
-<h2>Donate Through GoFundMe</h2>
+<h2>Choose a Donation Method</h2>
 
 <p>
-Every contribution helps Team Vienna Voltage continue inspiring the next
-generation of engineers, programmers, and innovators.
+Every contribution helps Team Vienna Voltage continue providing robotics
+education, outreach opportunities, and competitive STEM experiences.
 </p>
 
-<a href="https://gofund.me/e5f7d42bb" target="_blank" class="button">
-Donate on GoFundMe
-</a>
+<div class="donation-buttons">
+
+<a href="https://gofund.me/e5f7d42bb"
+target="_blank"
+class="button gofundme">
+GoFundMe </a>
+
+<a href="#"
+target="_blank"
+class="button paypal">
+PayPal </a>
+
+<a href="#"
+target="_blank"
+class="button cashapp">
+Cash App </a>
+
+<a href="#"
+target="_blank"
+class="button venmo">
+Venmo </a>
+
+</div>
 
 </div>
 
@@ -180,28 +252,32 @@ Donate on GoFundMe
 <div class="card">
 <h3>🤖 Robotics Equipment</h3>
 <p>
-Motors, sensors, electronics, building materials, and replacement parts.
+Motors, sensors, electronics, building materials, replacement parts,
+and engineering tools used throughout the FTC season.
 </p>
 </div>
 
 <div class="card">
 <h3>🏆 Competitions</h3>
 <p>
-FTC registration fees, tournaments, travel expenses, and team resources.
+FTC registration fees, tournament participation, travel expenses,
+and team resources required to compete.
 </p>
 </div>
 
 <div class="card">
 <h3>📚 STEM Outreach</h3>
 <p>
-Educational workshops, demonstrations, and robotics activities for younger students.
+Educational workshops, demonstrations, and robotics activities
+for elementary and middle school students.
 </p>
 </div>
 
 <div class="card">
 <h3>🚀 Future Growth</h3>
 <p>
-Expanding our outreach efforts and creating more opportunities for students.
+Expanding our outreach efforts and creating more opportunities
+for students to discover STEM through robotics.
 </p>
 </div>
 
@@ -211,7 +287,9 @@ Expanding our outreach efforts and creating more opportunities for students.
 
 <footer>
 
-<p>© 2026 Vienna Voltage FTC Team 27427</p>
+<p>
+© 2026 Vienna Voltage FTC Team 27427
+</p>
 
 </footer>
 

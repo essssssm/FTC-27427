@@ -1,169 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Vienna Voltage FTC 27427</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, Helvetica, sans-serif;
-        }
+<title>Vienna Voltage | FTC 27427</title>
 
-        body{
-            background:#f4f6f9;
-            color:#333;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-        header{
-            background:#003366;
-            color:white;
-            text-align:center;
-            padding:60px 20px;
-        }
+<style>
 
-        header h1{
-            font-size:3rem;
-            margin-bottom:10px;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
 
-        header p{
-            font-size:1.2rem;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        nav{
-            background:#002244;
-            padding:15px;
-            text-align:center;
-        }
+body{
+    background:#f5f7fa;
+    color:#1f2937;
+    overflow-x:hidden;
+}
 
-        nav a{
-            color:white;
-            text-decoration:none;
-            margin:0 20px;
-            font-weight:bold;
-        }
+/* NAVBAR */
 
-        nav a:hover{
-            color:#66ccff;
-        }
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(10,20,40,.95);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
 
-        section{
-            max-width:1000px;
-            margin:auto;
-            padding:50px 20px;
-        }
+.nav-container{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 30px;
+}
 
-        h2{
-            color:#003366;
-            margin-bottom:20px;
-        }
+.logo{
+    color:white;
+    font-size:1.3rem;
+    font-weight:800;
+}
 
-        .card{
-            background:white;
-            padding:25px;
-            border-radius:10px;
-            box-shadow:0 2px 10px rgba(0,0,0,0.1);
-        }
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    transition:.3s;
+}
 
-        footer{
-            background:#003366;
-            color:white;
-            text-align:center;
-            padding:20px;
-            margin-top:40px;
-        }
+.nav-links a:hover{
+    color:#60a5fa;
+}
 
-        .button{
-            display:inline-block;
-            margin-top:20px;
-            padding:12px 24px;
-            background:#0066cc;
-            color:white;
-            text-decoration:none;
-            border-radius:5px;
-        }
+/* HERO */
 
-        .button:hover{
-            background:#004d99;
-        }
-    </style>
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1561144257-e32e8efc6c4f?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:900px;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+    font-weight:800;
+}
+
+.hero p{
+    font-size:1.3rem;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    background:#1d4ed8;
+}
+
+/* SECTION */
+
+section{
+    padding:100px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:50px;
+    color:#0f172a;
+}
+
+/* CARDS */
+
+.card{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    opacity:0;
+    transform:translateY(60px);
+    transition:
+        opacity .8s ease,
+        transform .8s ease,
+        box-shadow .3s ease;
+}
+
+.card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+.card p{
+    line-height:1.8;
+    font-size:1.05rem;
+}
+
+/* GRID */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:10px 0;
+    font-size:1.1rem;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.8rem;
+}
+
+.hero p{
+    font-size:1.1rem;
+}
+
+.nav-links{
+    display:none;
+}
+
+}
+
+</style>
 </head>
 <body>
 
-    <header>
-        <h1>Team Vienna Voltage</h1>
-        <p>FIRST Tech Challenge Team 27427</p>
-    </header>
+<nav>
+    <div class="nav-container">
+        <div class="logo">FTC 27427</div>
 
-    <nav>
-        <a href="#about">About Us</a>
-        <a href="#mission">Our Mission</a>
-        <a href="#help">How You Can Help</a>
-        <a href="#contact">Contact</a>
-    </nav>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#mission">Mission</a>
+            <a href="#help">Support</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</nav>
 
-    <section id="about">
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Vienna Voltage</h1>
+
+        <p>
+            Team Vienna Voltage (FTC 27427) is a community-organized robotics
+            team dedicated to promoting STEM education and empowering students
+            through robotics, engineering, and innovation.
+        </p>
+
+        <a href="#about" class="btn">Learn More</a>
+
+    </div>
+
+</section>
+
+<section id="about">
+
+    <div class="container">
+
+        <h2 class="section-title">About Our Team</h2>
+
         <div class="card">
-            <h2>About Us</h2>
             <p>
-                Team Vienna Voltage (FTC 27427) is a community-organized robotics
-                team created to promote STEM to the community and to empower more
-                people through robotics. We are an ambitious group of high schoolers
-                who not only seek the fun in participating in competitions, but also
-                strive to spread our knowledge and passion for robotics to others.
+                Team Vienna Voltage (FTC 27427) is a community-organized robotics team
+                created to promote STEM to the community and to empower more people
+                through robotics. We are an ambitious group of high school students
+                who not only seek the excitement of participating in competitions,
+                but also strive to spread our knowledge and passion for robotics
+                throughout the community.
             </p>
         </div>
-    </section>
 
-    <section id="mission">
+    </div>
+
+</section>
+
+<section id="mission">
+
+    <div class="container">
+
+        <h2 class="section-title">Our Mission</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Inspire</h3>
+                <br>
+                <p>
+                    Encourage younger students to discover STEM fields through
+                    engaging robotics activities and demonstrations.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Teach</h3>
+                <br>
+                <p>
+                    Provide beginner-friendly robotics education and mentorship
+                    for elementary and middle school students.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Innovate</h3>
+                <br>
+                <p>
+                    Develop engineering, programming, and teamwork skills while
+                    competing in the FIRST Tech Challenge.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="help">
+
+    <div class="container">
+
+        <h2 class="section-title">How You Can Help</h2>
+
         <div class="card">
-            <h2>Our Mission</h2>
             <p>
-                To achieve our goal, we plan to partner with elementary and middle
-                schools to provide thorough, beginner-friendly opportunities for
-                students to explore robotics. Through outreach, mentorship, and
-                hands-on learning experiences, we hope to inspire the next generation
-                of innovators, engineers, and problem-solvers.
+                We are seeking partnerships with schools, libraries, community
+                organizations, and local businesses. Support from the community
+                allows us to expand outreach programs, purchase equipment, and
+                create more opportunities for students to explore robotics.
             </p>
         </div>
-    </section>
 
-    <section id="help">
-        <div class="card">
-            <h2>How You Can Help</h2>
-            <p>
-                We welcome support from schools, community organizations, local
-                businesses, and individuals who share our passion for STEM education.
-                Your support helps us expand outreach programs, purchase equipment,
-                and create meaningful learning opportunities for students.
-            </p>
+    </div>
 
-            <a href="#contact" class="button">Get Involved</a>
-        </div>
-    </section>
+</section>
 
-    <section id="contact">
-        <div class="card">
-            <h2>Contact Us</h2>
-            <p>
-                Interested in partnering with Team Vienna Voltage or learning more
-                about our outreach efforts? We'd love to hear from you!
-            </p>
+<section id="contact">
 
-            <br>
+    <div class="container">
+
+        <h2 class="section-title">Contact Us</h2>
+
+        <div class="card contact">
+
+            <p><strong>Team:</strong> Vienna Voltage FTC 27427</p>
 
             <p><strong>Email:</strong> teamviennavoltage@gmail.com</p>
-            <p><strong>Team Number:</strong> FTC 27427</p>
-        </div>
-    </section>
 
-    <footer>
-        <p>&copy; 2026 Team Vienna Voltage FTC 27427. All Rights Reserved.</p>
-    </footer>
+            <p>
+                Interested in collaborating, sponsoring, or learning more?
+                We'd love to hear from you.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>© 2026 Vienna Voltage FTC 27427 | Inspiring the Next Generation of Innovators</p>
+
+</footer>
+
+<script>
+
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add('show');
+
+}
+
+});
+
+},{
+threshold:0.15
+});
+
+cards.forEach(card=>{
+observer.observe(card);
+});
+
+</script>
 
 </body>
 </html>

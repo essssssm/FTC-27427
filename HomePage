@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Project</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #1f2937;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        .hero {
+            background: #2563eb;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #1f2937;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        footer {
+            background: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .button {
+            display: inline-block;
+            background: white;
+            color: #2563eb;
+            padding: 12px 25px;
+            margin-top: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #e5e7eb;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Community Project</h1>
+        <nav>
+            <a href="#goal">Our Goal</a>
+            <a href="#help">How You Can Help</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Making a Difference Together</h1>
+        <p>Join us in creating positive change in our community.</p>
+        <a href="#help" class="button">Get Involved</a>
+    </section>
+
+    <section id="goal">
+        <div class="card">
+            <h2>Our Goal</h2>
+            <p>
+                Our mission is to bring people together to support meaningful
+                projects, share resources, and create opportunities that improve
+                lives. We believe that small actions can lead to big results when
+                a community works together.
+            </p>
+        </div>
+    </section>
+
+    <section id="help">
+        <div class="card">
+            <h2>How You Can Help</h2>
+            <ul>
+                <li>Volunteer your time and skills.</li>
+                <li>Share our mission with friends and family.</li>
+                <li>Participate in community events.</li>
+                <li>Contribute ideas and feedback.</li>
+                <li>Support ongoing projects and initiatives.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="card">
+            <h2>Contact Us</h2>
+            <p>Email: contact@example.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Location: Your City, State</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Community Project. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
